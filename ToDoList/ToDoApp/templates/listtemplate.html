@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>To Do List</h1>
+<table class='table'>
+ <tr>
+     <th>List Name</th>
+     <th>Date Created</th>
+     <th>Time Created</th>
+     <th>Task</th>
+     <th>Due Date</th>
+     <th>Due Time</th>
+     <th>Priority</th>
+   
+ </tr>
+ {% for t in type_list %}
+   <tr>
+       <td>{{ t.listtitle }}</td>
+       <td>{{ t.listcreatedate}}</td>
+       <td>{{ t.listcreatetime }}</td>
+       <td>{{ t.listitem }}</td>
+       <td>{{ t.listitemduedate}}</td>
+       <td>{{ t.listitemduetime }}</td
+       <td>{{ t.listpriority }}</td>
+   
+    </tr>
+
+ {% endfor %}
+
+
+</table>
+
+
+{% endblock %}
