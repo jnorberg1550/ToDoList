@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Due Dates</h1>
+<table class='table'>
+ <tr>
+     <th>List Name</th>
+     <th>List Due Date</th>
+ </tr>
+ {% for t in type_list %}
+   <tr>
+       <td>{{ t.listtitle }}</td>
+       <td>{{ t.listitemduedate }}</td>
+       <td>{{ t.listpriority }}</td>
+   </tr>
+
+ {% endfor %}
+
+
+</table>
+
+
+{% endblock %}
