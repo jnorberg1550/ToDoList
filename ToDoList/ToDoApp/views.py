@@ -8,6 +8,6 @@ from django.shortcuts import render
     type_list=ListType.objects.all()
     return render(request, 'ToDoApp/types.html' ,{'type_list' : type_list})
 
-    def getproducts(request):
+    def getduedate(request):
     listitemduedate_list=ListType.objects.all()
-    return render(request, 'ToDoApp/listitemduedate.html', {'listitemduedates_list': listitemduedate_list})
+    return render(request, 'ToDoApp/listitemduedate.html', {'listitemduedates_list': listitemduedates_list})
