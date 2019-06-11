@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ prod.listtype }}</h2>
+<p>List Title: {{ prod.listtitle}} </p>
+<p>Date Created: {{ prod.listcreatedate }}</p>
+<p>Task: {{ prod.listitem }}</p>
+<p>Due Date: {{ prod.listduedate }}</p>
+<p>Due Time: {{ prod.listduetime }}</p>
+<p>Priority: {{ prod.listpriority }}</p>
+
+
+{% endblock %}
