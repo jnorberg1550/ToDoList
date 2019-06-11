@@ -34,3 +34,16 @@ def newList(request):
 
     def logoutmessage(request):
     return render(request, 'ToDoAppapp/logoutmessage.html')
+
+@login_required
+def newList(request):
+     form=ListForm
+     if request.method=='POST':
+          form=ListForm(request.POST)
+          if form.is_valid():
+               post=form.save(commit=True)
+               post.save()
+               form=ListForm()
+     else:
+          form=ListForm()
+     return render(request, 'ToDoapp/newlist.html', {'form': form}
