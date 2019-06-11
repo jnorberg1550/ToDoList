@@ -25,5 +25,11 @@ def newList(request):
                post.save()
                form=ListForm()
      else:
-          form=ListForm()
+     form=ListForm()
      return render(request, 'ToDoApp/newlistform,.html', {'form': form})
+
+    def loginmessage(request):
+    return render(request, 'ToDoApp/loginmessage.html')
+
+    def logoutmessage(request):
+    return render(request, 'ToDoAppapp/logoutmessage.html')
