@@ -7,7 +7,7 @@ def index (request):
 
 def gettypes(request):
     type_list=ListType.objects.all()
-    return render(request, 'ToDoApp/types.html' ,{'type_list' : type_list})
+    return render(request, 'ToDoApp/newlistform.html' ,{'type_list' : type_list})
 
 def getduedate(request):
     listitemduedate_list=ListType.objects.all()
@@ -46,4 +46,4 @@ def newList(request):
                form=ListForm()
      else:
           form=ListForm()
-     return render(request, 'ToDoapp/newlist.html', {'form': form}
+     return render(request, 'ToDoapp/newlistform.html', {'form': form}
