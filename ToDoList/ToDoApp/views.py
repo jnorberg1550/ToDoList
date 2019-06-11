@@ -10,7 +10,11 @@ def gettypes(request):
 
 def getduedate(request):
     listitemduedate_list=ListType.objects.all()
-    return render(request, 'ToDoApp/listitemduedate.html', {'listitemduedates_list': listitemduedates_list})
+    return render(request, 'ToDoApp/duedatetemplate.html', {'listitemduedates_list': listitemduedates_list})
+
+def listitempriority(request, id):
+    prod=get_object_or_404(Product, pk=id)
+    return render(request, 'ToDoApp/duedatetemplate.html', context=context)
 
 def newList(request):
      form=ListForm
